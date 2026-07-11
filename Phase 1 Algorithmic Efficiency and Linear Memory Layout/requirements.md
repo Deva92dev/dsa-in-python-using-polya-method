@@ -17,3 +17,15 @@
   - To check your rules, you look at the data inside the box
   - To move to the next box, you increment the box number
   - values swap not the pointers itself
+
+# Summing two distinct numbers to target, 11/07/26
+
+- First Pointer will start at 0th index and move right and Second pointer will start at last index(arr.length - 1) and move left.
+
+- If the sum of the values which are both pointers pointing at is less than the target, first pointer will increase its place by 1(move right)
+
+- If the sum of the values which are both pointers pointing at is greater than the target, second pointer will decrease its place by 1(move left)
+
+- If the sum of the values which are both pointers pointing at is equal to the target, we will return the indices of both pointers
+
+- Both pointer must never access the same index because problem requires two distinct numbers

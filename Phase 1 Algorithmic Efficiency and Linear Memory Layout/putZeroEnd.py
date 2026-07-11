@@ -10,7 +10,7 @@
 
 
 def move_zeroes(arr):
-    first_pointer = 0
+    first_pointer = 0  # placed at index not values
     second_pointer = 1
 
     if len(arr) == 1:
