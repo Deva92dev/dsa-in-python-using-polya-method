@@ -29,3 +29,19 @@
 - If the sum of the values which are both pointers pointing at is equal to the target, we will return the indices of both pointers
 
 - Both pointer must never access the same index because problem requires two distinct numbers
+
+# Summing three distinct numbers to target, 14/07/26
+
+- Solve Three dimensional problem in O(N^2) time requires freezing one dimension and then try to solve it for other two dimension. and also eliminate of dead space which is already covered by one dimension(means do not include that in further calculation).
+
+- I took Three pointers and fixed first pointer at 0th index of array. And Then put second pointer and 1st index of array and third pointer at last index of array(arr.length - 1).
+
+- So, after fixing the position of first pointer, we move second pointer one place right if sum of three is less than the target and if sum is more than the target, third pointer will move one place left.
+
+- and if i did not get the required result, first pointer will move one place right and in that condition second pointer will be on next index of first pointer and third pointer at last index of array(arr.length - 1) and will do the same operation again till we get sum of three equal to target.
+
+- condition will be for first pointer will traverse till the last index of array.
+- second pointer traverse in right direction and third pointer traverse in left direction.
+
+- range(len(my_array)) creates an iterable of indices starting from 0 up to len(my_array) - 1
+- first pointer must stop 2 places before the end of array because it need space for other two pointers(think of an array have only 3 items)
