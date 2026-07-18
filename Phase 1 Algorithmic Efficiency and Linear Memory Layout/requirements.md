@@ -45,3 +45,19 @@
 
 - range(len(my_array)) creates an iterable of indices starting from 0 up to len(my_array) - 1
 - first pointer must stop 2 places before the end of array because it need space for other two pointers(think of an array have only 3 items)
+
+# Maximum mathematical sum of contiguous sub-array of size k in an array, 18/07/26
+
+- Will have two variables named, highest and current and one more window for tracking
+- we will get the sum of first k elements of array and put the value in highest and current both.
+
+- sum(islice(my_list, k)) calculates the sum of the first k elements of an iterable my_list. This approach is preferred over slicing (sum(my_list[:k])) when memory efficiency is critical, as islice (from the itertools module) extracts elements without creating an intermediate list copy
+
+- And the loop will start from index k and traverse to end of array
+
+- Now when sliding window moves right one place we will add last current value to new incoming element and subtract the leaving element and at this point we will compare which is bigger, current or highest.
+
+- If current is bigger, we will update the value of highest with that current value and then sliding window will move right one place.
+- If current is less than the highest, then no need to update value of highest and sliding window will move one place right.
+
+- sliding window will run till the last element of array.
