@@ -61,3 +61,20 @@
 - If current is less than the highest, then no need to update value of highest and sliding window will move one place right.
 
 - sliding window will run till the last element of array.
+
+# The shortest path to target threshold
+
+- Window will start with one element in it and from the 0th index of array.
+- we will have left as left side of window and right as right side of window and at the very beginning it start with first.
+
+- window will traverse till last < len(array).
+- we will sum the values of indexes in window to check whether sum is greater than or equal or less than the target threshold.
+
+- if sum is greater than or equal to target we will note the length of window and then increases first by 1 to the right so that window gets shrink.
+
+- if the sum is less than the target we will increases last by 1 to the right so window gets expanded.
+
+- if left moves right by one place, subtract value of this from current sum
+- if right moves right by one place, add values of this to current sum.
+
+- Then repeat the process from 4th point to 7th point by using while
